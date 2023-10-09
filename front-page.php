@@ -37,4 +37,4 @@ $context['posts'] = $posts;
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render(array('pages/page-' . $timber_post->post_name . '.twig', 'twig/page.twig'), $context);
+Timber::render(array('pages/front-page/front-page.twig', 'twig/page.twig'), $context);

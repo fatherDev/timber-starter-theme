@@ -1,45 +1,30 @@
-{% block html_head_container %}
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+	<head>
+		{% block head %}{% endblock %}
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
+		<meta name="facebook-domain-verification" content="d3zvs11nsp0pao1c4k6o2gnfqgej1p"/>
+		<meta charset="{{ site.charset }}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="icon" href="" type="image/gif" sizes="512x512">
+		{{ wp_head }}
+
 	</head>
-{% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'items': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
-		</header>
+	<body class="{{ body_class }}">
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+		{% block navigation %}
+			{% include 'header/menu.twig' %}
+		{% endblock %}
+
+		<main>
+			{% block container %}{% endblock %}
+		</main>
 
 		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
+			{% include 'footer/footer.twig' %}
 		{% endblock %}
+		{{ wp_footer }}
 	</body>
 </html>
