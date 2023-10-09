@@ -20,11 +20,11 @@ If you want to create new page or component look at front-page example.
 
 After cloning this theme - in your root folder run `npm install` to install all nesecary node.js (`node version 14.16.1`) dependencies. Then run `composer install` to install all composer necesary dependencies (ex. Timber or Dumeper). Create your `.env` file.
 
-Run `npm start` to watch all changes in browser.
+Run `npm run start` to watch all changes in browser.
 
-Run `npm build` to build and minify all files.
+Run `npm run build` to build and minify all files.
 
-Before running `npm build` update version in `style.css` file to prevent site to use old cached version.
+Before running `npm run build` update version in `style.css` file to prevent site to use old cached version.
 
 ## Other Resources
 

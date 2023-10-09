@@ -17,10 +17,6 @@ if (mode === "production") {
 module.exports = {
   entry: {
     index: "./resources/js/index.js",
-    // admin: "./resources/js/admin.js",
-    // "list-partners": "./resources/js/list-partners.js",
-    // promo: "./resources/js/promo.js",
-    // front: "./resources/js/front.js",
   },
   output: {
     path: `${__dirname}/public/js`,
