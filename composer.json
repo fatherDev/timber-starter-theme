@@ -27,7 +27,6 @@
     "livespace/livespace-php": "dev-master"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-latest",
     "symfony/var-dumper": "^5.2"
   },
   "config": {
